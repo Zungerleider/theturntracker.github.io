@@ -6,24 +6,18 @@
     top: 50%;
     bottom: auto;
     right: auto;
-    transform: translateX(-50%) translateY(-50%);
+    @include transform(translateX(-50%) translateY(-50%));
   }
   @else if $xy == x {
     left: 50%;
     right: auto;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
   }
   @else if $xy == y {
     top: 50%;
     bottom: auto;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
-}
-
-// border radius
-
-@mixin border-radius($radius:.25em) {
-  border-radius: $radius;
 }
 
 // antialiasing mode font rendering
@@ -33,29 +27,67 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// clearfix
+// define a different bounce animation for h1 and p elements
 
-@mixin clearfix {
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
+@mixin bounce($animation, $value1, $value2) {
+  @include keyframes($animation) {
+    0% {
+      opacity: .2;
+      @include transform(translateX($value1));
+    }
+    60% {
+      opacity: .7;
+      @include transform(translateX($value2));
+    }
+    100% {
+      opacity: 1;
+      @include transform(translateX(0));
+    }
   }
 }
 
-// color tint and shade
+// define different cut animations
 
-@function shade(
-    $color,
-    $percent
-  ) {
+@mixin cut($animation, $value) {
+  @include keyframes($animation) {
+    0% {
+      opacity: 1;
+      @include transform(translateX($value));
+    }
 
-  @return mix(#000, $color, $percent);
+    100% {
+      opacity: 1;
+      @include transform(translateX(0));
+    }
+  }
 }
-@function tint(
-    $color,
-    $percent
-  ) {
 
-  @return mix(#fff, $color, $percent);
+// define different reveal animations
+
+@mixin reveal($animation, $value) {
+  @include keyframes($animation) {
+    0% {
+      opacity: 1;
+      @include transform(translateY($value));
+    }
+
+    100% {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+  }
+}
+
+// define different mask-2 animations
+
+@mixin mask2($animation, $value) {
+  @include keyframes($animation) {
+    0% {
+      @include transform(translateX($value));
+    }
+
+    100% {
+      @include transform(translateX(0));
+    }
+  }
 }
