@@ -16,19 +16,20 @@
 <main>
 	<div class="cd-index cd-main-content">
 		<div>
-			<h1>loading...</h1>
+			<h1>Page Transition</h1>
 
 			<a class="cd-btn" href="refresh/about.html" data-type="page-transition">Start animation</a>
 		</div>
 	</div>
 </main>
--- End Refresh -->
 
-<!-- Title-->
 <div class="cd-cover-layer"></div>
 <div class="cd-loading-bar"></div>
 <script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script>
+!-- End Refresh -->
+
+<!-- Title-->
 <section class="cd-intro">
 	<div class="cd-intro-content mask">
 		<h1 data-content="Welcome to My Website!"><span>Welcome to my website!</span></h1>
@@ -44,27 +45,5 @@
 <script src="title/js/main.js"></script> <!-- Resource jQuery -->
 <!-- End Title -->
 
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  	ga('create', 'UA-48014931-1', 'codyhouse.co');
-  	ga('send', 'pageview');
-
-  	jQuery(document).ready(function($){
-  		$('.close-carbon-adv').on('click', function(event){
-  			event.preventDefault();
-  			$('#carbonads-container').hide();
-  		});
-  		var domain = 'http://codyhouse.co/demo/animated-intro-section/';
-		$('.cd-demo-settings').on('change', function(){
-			var animation = $('#selectAnimation').find("option:selected").val(),
-				newFile = animation+'.html';
-			window.location.href = domain+newFile;
-		});
-  	});
-</script>
 </body>
 </html>
