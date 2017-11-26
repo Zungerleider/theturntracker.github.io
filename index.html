@@ -6,40 +6,46 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700,400' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="title/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="title/css/style.css"> <!-- Resource style -->
+	<script src="title/js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>zungerleider</title>
 <body>
-<!-- Refresh -->
-<main>
-	<div class="cd-index cd-main-content">
-		<div>
-			
-			<!-- Title-->
-			<section class="cd-intro">
-				<div class="cd-intro-content mask">
-					<h1 data-content="Welcome to My Website!"><span>Welcome to my website!</span></h1>
-						<div class="action-wrapper">
-							<p>
-								<a href="test1" class="cd-btn main-action" data-type="page-transition">we're currently</a>
-								<a href="about.html" class="cd-btn" data-type="page-transition">under construction</a>
-							</p>
-						</div>
-				</div>
-			</section>
-			<!-- End Title -->
-			
+<section class="cd-intro">
+	<div class="cd-intro-content mask">
+		<h1 data-content="Welcome to My Website!"><span>Animated Intro Section</span></h1>
+		<div class="action-wrapper">
+			<p>
+				<a href="#0" class="cd-btn main-action">we're currently</a>
+				<a href="#0" class="cd-btn">under construction</a>
+			</p>
 		</div>
 	</div>
-</main>
+</section>
+<script src="title/js/jquery-2.1.4.js"></script>
+<script src="title/js/main.js"></script> <!-- Resource jQuery -->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<div class="cd-cover-layer"></div>
-<div class="cd-loading-bar"></div>
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<!-- End Refresh -->
+  	ga('create', 'UA-48014931-1', 'codyhouse.co');
+  	ga('send', 'pageview');
 
+  	jQuery(document).ready(function($){
+  		$('.close-carbon-adv').on('click', function(event){
+  			event.preventDefault();
+  			$('#carbonads-container').hide();
+  		});
+  		var domain = 'http://codyhouse.co/demo/animated-intro-section/';
+		$('.cd-demo-settings').on('change', function(){
+			var animation = $('#selectAnimation').find("option:selected").val(),
+				newFile = animation+'.html';
+			window.location.href = domain+newFile;
+		});
+  	});
+</script>
 </body>
 </html>
