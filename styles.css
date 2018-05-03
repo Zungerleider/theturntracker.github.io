@@ -1,0 +1,27 @@
+body    {
+    background-color: darkgoldenrod;
+    font-family: Helvetica;
+    width: 90%;
+    margin: auto
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    
+}
+
+ul {
+    margin: auto;
+    width: 50%;
+}
+
+a {
+    color: white;
+}
