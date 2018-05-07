@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     
     <!-- Bootstrap core CSS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <!-- Zach's custom CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -14,13 +16,23 @@
 </head>
 <body>
     <main>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Look, a menu!</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li class="active"><a href="#">Page 2</a></li>
+                    <li class="disabled"><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="container">
             <div>
-                <p>
-                    Wow, look at this second page! What an incredible page it is, too.
-                    <br>
-                    <a href="./index.html">Go back</a>
-                </p>
+                <h1>Wow, look at this second page! What an incredible page it is, too.</h1>
+                <br>
+                <h4>(You can use the menu at the top of the page to get back home.)</h4>
             </div>
         </div>
     </main>
