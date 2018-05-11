@@ -1,3 +1,4 @@
+
 body {
     background-color: lightseagreen;
     font-family: Helvetica;
@@ -18,7 +19,7 @@ p {
 }
 
 a:link, a:visited {
-    text-decoration: none;
+text-decoration: none;
     color: coral;
 }
 
@@ -26,8 +27,12 @@ a.disabled {
     pointer-events: none;
 }
 
-a:hover, a:active {
+/a:hover, a:active {
     color: grey;
+}
+
+ul.dropdown-menu > li > a:hover {
+    background-color: lightblue !important;
 }
 
 .vertical-align {
