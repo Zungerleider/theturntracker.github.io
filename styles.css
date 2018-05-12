@@ -1,12 +1,26 @@
+/*
+
+Color scheme
+------------
+
+Black
+White
+Light green: 170,212,0
+Light blue: 12,181,219
+Dark blue: 1,85,149
+
+*/
+
 
 body {
-    background-color: lightseagreen;
+    background-color: white;
     font-family: Helvetica;
+    color: black;
 }
 
 .jumbotron {
-    background-color: darkslateblue;
-    color: white;
+    background-color: rgb(18,181,219);
+    margin: auto;
     
 }
 
@@ -19,20 +33,28 @@ p {
 }
 
 a:link, a:visited {
-text-decoration: none;
-    color: coral;
+    text-decoration: none;
 }
 
 a.disabled {
     pointer-events: none;
 }
 
-/a:hover, a:active {
+a:hover, a:active {
     color: grey;
+}
+
+.container {
+    background-color: rgb(170,212,0);
+    padding: auto
 }
 
 ul.dropdown-menu > li > a:hover {
     background-color: lightblue !important;
+}
+
+ul.dropdown-menu > li.active > a {
+    background-color: rgb(1,85,149) !important;
 }
 
 .vertical-align {
